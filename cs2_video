@@ -41,7 +41,7 @@
 	"setting.lb_csm_draw_alpha_tested"		"1"
 	"setting.lb_csm_draw_translucent"		"0"
 	"setting.r_particle_cables_cast_shadows"		"0"
-	"setting.lb_enable_shadow_casting"		"0"
+	"setting.lb_enable_shadow_casting"		"1"
 	"setting.lb_csm_cross_fade_override"		"0.100000"
 	"setting.lb_csm_distance_fade_override"		"0.050000"
 	"setting.r_particle_shadows"		"0"
