@@ -1,9 +1,9 @@
 //mouse_settings
-sensitivity "1.15"
+sensitivity "1.00"
 
 //fps_settings
 fps_max "0"
-fps_max_ui "120"
+fps_max_ui "0"
 
 //general_settings
 rate "1000000"
@@ -12,7 +12,7 @@ engine_low_latency_sleep_after_client_tick "1"
 cl_disable_ragdolls "1"
 
 //graphic_settings
-r_fullscreen_gamma "2.45"
+r_fullscreen_gamma "2.5"
 r_drawtracers_firstperson "0"
 
 //viewmodel_settings
@@ -30,6 +30,9 @@ cl_hud_telemetry_ping_poor "100"
 cl_hud_telemetry_ping_show "2"
 cl_hud_telemetry_serverrecvmargin_graph_show "0"
 
+//network_settings
+cl_net_buffer_ticks "0"
+
 //hud_settings
 cl_radar_always_centered "0"
 cl_radar_scale "0.3"
@@ -42,16 +45,16 @@ safezonex "0.9"
 safezoney "1"
 
 //volume_settings
-volume "0.25"
-snd_tensecondwarning_volume "0.5"
+volume "0.005"
+snd_tensecondwarning_volume "0.75"
 snd_roundstart_volume "0"
 snd_roundend_volume "0"
 snd_roundaction_volume "0"
 snd_mvp_volume "0"
 snd_musicvolume "0"
 snd_menumusic_volume "0"
-snd_mapobjective_volume "0.5"
-snd_gamevolume "0.5"
+snd_mapobjective_volume "0.75"
+snd_gamevolume "0.75"
 snd_deathcamera_volume "0"
 
 //grenade_settings
@@ -84,24 +87,6 @@ alias "+smoke" "slot3; buy weapon_smokegrenade"
 alias "-smoke" "slot8"
 bind "v" "+smoke"
 
-alias "+jumpaction" "+jump;"
-alias "+throwaction" "-attack; -attack2"
-alias "-jumpaction" "-jump" 
-bind "j" "+jumpaction;+throwaction;"
-
-alias "+runthrow" "+forward;+jump;" 
-alias "-runthrow" "-jump;-forward" 
-bind "h" "+runthrow;+throwaction"
-
-bind "space" "+duckjump"
-alias "+duckjump" "+jump; +duck"
-alias "-duckjump" "-jump; -duck"
-
-bind "mwheelup" "+jump_"
-bind "mwheeldown" "+jump_"
-alias "+jump_" "+jump;+jump"
-alias "-jump_" "-jump;-jump;-jump"
-
 alias "+quickswitch" "slot3"
 alias "-quickswitch" "lastinv"
 bind "q" "+quickswitch"
@@ -114,27 +99,6 @@ bind "9" "toggle cl_crosshairdot 0 1"
 bind "8" "toggle cl_crosshairthickness 0.5 1.0"
 bind "7" "toggle cl_crosshairgap -6.5 -5.5 -4.5 -3.5 -2.5 -1.5 -0.5 0.0 0.5 1.0 1.5 2.0 2.5"
 bind "6" "toggle cl_crosshairsize 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0 5.5 6.0"
-
-//null_binds
-alias checkfwd ""
-alias checkback ""
-alias checkleft ""
-alias checkright ""
-
-alias +mfwd "-back; +forward; alias checkfwd +forward"
-alias +mback "-forward; +back; alias checkback +back"
-alias +mleft "-right; +left; alias checkleft +left"
-alias +mright "-left; +right; alias checkright +right"
-
-alias -mfwd "-forward; -back; checkback; alias checkfwd"
-alias -mback "-back; -forward; checkfwd; alias checkback"
-alias -mleft "-left; -right; checkright; alias checkleft"
-alias -mright "-right; -left; checkleft; alias checkright"
-
-bind W "+mfwd"
-bind A "+mleft"
-bind S "+mback"
-bind D "+mright"
 
 echo "autoexec config loaded"
 
